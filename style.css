@@ -1,0 +1,17 @@
+.promotion{
+    font-size: small;
+    background-color: rgb(96, 193, 173);
+    height: 25px;
+}
+
+.dropdown-divider{
+    border-top: 1px solid rgb(13, 202, 240);
+}
+
+.searchForm {
+    margin-left: 250px;
+}
+
+.searchForm input::placeholder{
+    color: rgb(13, 202, 240);
+}
