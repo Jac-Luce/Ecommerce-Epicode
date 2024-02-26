@@ -63,23 +63,23 @@ function createCardTemplate ({name, imageUrl, price, _id}) {
         <a href="#" class="btn btn-primary">Go somewhere</a>
       </div> */
     let cardBox = document.createElement('div');
-    cardBox.classList.add('card', 'me-4', 'mb-3', 'd-flex', 'position-relative');
-    cardBox.style.width = "14rem";
+    cardBox.classList.add('card', 'me-4', 'mb-5', 'd-flex', 'position-relative', 'border-0');
+    cardBox.style.width = "12rem";
       
     let imgCard = document.createElement('img');
-    imgCard.classList.add('card-img-top');
+    imgCard.classList.add('card-img-top', 'img-fluid', 'imgStyle', 'rounded');
     imgCard.src = imageUrl;
 
     let cardBody = document.createElement('div');
     cardBody.classList.add('card-body');
 
     let cardTitle = document.createElement('h5');
-    cardTitle.classList.add('card-title');
+    cardTitle.classList.add('card-title', 'fs-6', 'text-center', 'mb-0');
     cardTitle.innerText = name;
 
     let priceCard = document.createElement('p');
-    priceCard.classList.add('card-text');
-    priceCard.innerText = "Prezzo: " + price + "€";
+    priceCard.classList.add('card-text', 'price', 'text-center', 'fst-italic', 'text-muted', 'mb-1');
+    priceCard.innerText = "Price: " + price + "€";
 
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(priceCard);
@@ -94,7 +94,7 @@ function createCardTemplate ({name, imageUrl, price, _id}) {
     divBtn.classList.add('d-flex' , 'position-absolute', 'top-50', 'end-0', 'mt-5');
 
     let editBtn = document.createElement('a');
-    editBtn.classList.add('btn', 'btn-outline-info', 'btn-sm');
+    editBtn.classList.add('btn', 'btn-outline-info', 'btn-sm', 'btnEditDel', 'rounded-circle');
     editBtn.href = `modifica.html?id=${_id}`; //modifica dati prodotto
     editBtn.target = '_blank'; //comando che consente di aprire un'altra scheda
     let editImg = document.createElement('i');
@@ -102,7 +102,7 @@ function createCardTemplate ({name, imageUrl, price, _id}) {
     editBtn.appendChild(editImg);
 
     let delBtn = document.createElement('a');
-    delBtn.classList.add('btn', 'btn-outline-danger', 'btn-sm', 'mx-1');
+    delBtn.classList.add('btn', 'btn-outline-danger', 'btn-sm', 'mx-1', 'btnEditDel', 'rounded-circle');
     delBtn.addEventListener('click', () => { //elimina prodotto
         deleteCard(_id);
     })
@@ -116,6 +116,7 @@ function createCardTemplate ({name, imageUrl, price, _id}) {
 
     //link descrizione
     let linkDesc = document.createElement('a');
+    linkDesc.classList.add('text-muted', 'linkDesc', 'ms-2');
     linkDesc.href = `descrizione.html?id=${_id}`;
     linkDesc.innerText = "See More!";
     cardBody.appendChild(linkDesc);

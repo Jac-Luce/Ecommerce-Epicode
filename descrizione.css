@@ -17,41 +17,9 @@
     color: rgb(13, 202, 240);
 }
 
-/*PRODUCT AREA*/
-.imgStyle{
-    width: 190px;
-    height: 190px;
-    object-fit: cover;
-}
-
-.card {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.card-body{
-    padding-left: 0;
-    padding-right: 0;
-    padding-bottom: 0;
-    padding-top: 5px;
-}
-
-.price {
-    font-size: smaller;
-}
-
-.linkDesc {
-    font-size: smaller;
-}
-
-.btnEditDel {
-    font-size: 0.6rem;
-    padding-left: 6px;
-    padding-right: 6px;
-}
-
-.top-50 {
-    top: 70% !important;
+/*DESCRIPTION AREA*/
+#imgCard {
+    object-fit: contain;
 }
 
 /*FOOTER*/
